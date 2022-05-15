@@ -9,10 +9,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class vet_MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private vet_FragmentDiagnosis vet_fragmentDiagnosis = new vet_FragmentDiagnosis();
-    private FragmentMyPage fragmentMyPage = new FragmentMyPage();
+    private vet_FragmentMyPage vet_fragmentMyPage = new vet_FragmentMyPage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.vet_Diagnosis:
                     transaction.replace(R.id.frameLayout, vet_fragmentDiagnosis).commitAllowingStateLoss();
                     break;
-                case R.id.MyPage:
-                    transaction.replace(R.id.frameLayout, fragmentMyPage).commitAllowingStateLoss();
+                case R.id.vet_MyPage:
+                    transaction.replace(R.id.frameLayout, vet_fragmentMyPage).commitAllowingStateLoss();
                     break;
             }
             return true;
